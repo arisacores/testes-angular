@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testes Angular JS</title>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+
+</head>
+<body ng-app>
+
+	<div class="container" ng-init="customers=[{name:'SUP',city: 'madville'},{name:'BRO',city: 'brocode'},{name: 'U',city: 'madville'},{name: 'MAD',city:'question mark'}]">
+
+		<input type="text" placeholder="Search for BROS"  ng-model="name" />
+
+		<ul>
+
+			<li ng-repeat="cust in customers | filter:name">{{cust.name}} from {{cust.city}}</li>
+
+			
+
+
+		</ul>
+
+
+
+
+	</div>
+
+
+
+</body>
+</html>

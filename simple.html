@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>TesteNG</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+</head>
+<body>
+
+	<div class="container" ng-init="name='sup'" >
+		{{name}} {{data}} </br>
+		<input type="text" placeholder="here bro" ng-model="data">
+	</div>
+
+	<div class="container" ng-init="persons=[{name: 'sup', city: 'mad ville'}, {name: 'bro', city:'bro ville'}]" >
+		<ul>
+			<li ng-repeat="person in persons | filter: cromos">{{person.name}}</li>
+		</ul>
+		{{name.name}} {{name.city}} </br>
+
+		<input type="text" placeholder="here bro" ng-model="cromos">
+	</div>
+
+	<div class="container" ng-controller="myControl">
+		<ul>
+			<li ng-repeat="person in persons | filter: coconuts" >
+				{{person.name}} from {{person.city}}
+			</li>
+		</ul>
+		<input type="text" placehorlder="controle bro" ng-model="coconuts"
+	</div>
+	
+
+<script type="text/javascript">
+	function myControl ($scope) {
+		$scope.names="persons=[{name: 'sup', city: 'mad ville'}, {name: 'bro', city:'bro ville'}]";
+	}
+</script>
+</body>
+</html>

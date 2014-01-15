@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testes Angular JS</title>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+
+</head>
+<body ng-app>
+
+	<div class="container" ng-controller="SimpleController">
+		<ul>
+			<li ng-repeat="cust in customers">
+				{{cust.name}} - {{cust.city}}
+			</li>
+		</ul>
+
+	</div>
+
+<script>
+	
+	function SimpleController($scope){
+		$scope.customers=[
+		{name:'SUP', city: 'MAD VILLE'}
+		];
+
+	}
+
+</script>
+
+
+</body>
+</html>
